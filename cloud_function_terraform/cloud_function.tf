@@ -13,7 +13,7 @@ resource "google_storage_bucket" "code-bucket" {
 resource "google_storage_bucket_object" "code-archive" {
   name   = "index.zip"
   bucket = google_storage_bucket.code-bucket.name
-  source = "."
+  source = "./index.zip"
 }
 
 resource "google_cloudfunctions_function" "http-cloud-function" {
