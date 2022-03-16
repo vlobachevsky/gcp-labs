@@ -1,10 +1,3 @@
-# # Grand Terraform SA access to code bucket
-# resource "google_storage_bucket_iam_member" "terraform_sa_code_bucket_list" {
-#   bucket = google_storage_bucket.code_bucket.name
-#   role = "roles/storage.admin"
-#   member = "terraform@${var.project}.iam.gserviceaccount.com"
-# }
-
 resource "google_storage_bucket" "code_bucket" {
   name     = "${var.project}-code"
   location = "US"
