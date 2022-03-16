@@ -10,9 +10,6 @@ gcloud config set project $PROJECT_ID
 gcloud services enable cloudfunctions.googleapis.com 
 gcloud services enable cloudbuild.googleapis.com
 
-rm -f ../terraform.tfstate
-rm -f ../terraform.tfstate.backup
-
 # Clean up
 # gcloud iam service-accounts delete terraform@$PROJECT_ID.iam.gserviceaccount.com
 # gsutil rb -f gs://$PROJECT_ID-tfstate
